@@ -1,7 +1,7 @@
 import { Stack } from "@mui/joy";
 import React from "react";
 import { Outlet } from "react-router-dom";
-import SideNavbar from "../components/SideNavbar";
+import SideNavbar from "./SideNavbar";
 
 const AuthLayout = () => {
   return (

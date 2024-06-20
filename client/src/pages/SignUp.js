@@ -37,6 +37,10 @@ const SignUp = () => {
         : response.message,
       color: response.success ? "success" : "danger",
     });
+
+    if (response.success) {
+      navigate("/login");
+    }
   };
 
   return (

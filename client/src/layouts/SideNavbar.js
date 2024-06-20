@@ -17,12 +17,10 @@ const NavItem = ({ icon, label, path }) => {
         level="h4"
         fontSize={28}
         sx={{
-          color: (theme) => {
-            console.log({ theme });
-            return pathname.includes(path)
+          color: (theme) =>
+            pathname.includes(path)
               ? theme.palette.primary[500]
-              : theme.palette.neutral[400];
-          },
+              : theme.palette.neutral[400],
         }}
       >
         {label}

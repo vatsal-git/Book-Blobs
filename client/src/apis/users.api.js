@@ -3,7 +3,6 @@ import { getApiClient } from ".";
 export const getCurrentUser = async () => {
   try {
     const response = await getApiClient().get("/users/current_user/");
-    console.log({ response });
     return { data: response.data, success: true };
   } catch (error) {
     console.error(error);

@@ -13,6 +13,7 @@ import AuthLayout from "./layouts/AuthLayout";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Explore from "./pages/Explore";
+import CreateModal from "./components/modals/CreateModal";
 
 export const routes = {
   nonAuthRoutes: [
@@ -34,14 +35,14 @@ export const routes = {
       path: "/",
       element: <AuthLayout />,
       children: [
-        { path: "home", element: <Home /> },
-        { path: "explore", element: <Explore /> },
-        { path: "profile", element: <Profile /> },
+        { path: "/home", element: <Home /> },
+        { path: "/explore", element: <Explore /> },
+        { path: "/profile", element: <Profile /> },
+        {
+          path: "/create",
+          element: <CreateModal />,
+        },
       ],
-    },
-    {
-      path: "/create",
-      element: <div>Create</div>,
     },
     {
       path: "*",
